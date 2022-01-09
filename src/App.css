@@ -1,0 +1,22 @@
+.App {
+  font-family: 'Roboto', sans-serif;
+}
+.nav{
+  background-color: #000;
+  color: #fff;
+  padding-top: 12px;
+  padding-bottom: 1vw;
+  font-size:large;
+  font-weight: bold;
+  padding-left: 10px;
+  display: flex;
+}
+.navitem1{
+flex:1;
+}
+.navitem2{
+  margin-right: 90vw;
+}
+.content{
+  text-align: center
+}
