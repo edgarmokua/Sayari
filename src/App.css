@@ -10,13 +10,22 @@
   font-weight: bold;
   padding-left: 10px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.navitem1{
-flex:1;
+
+.a{
+  text-decoration: none;
+  color: #fff
 }
-.navitem2{
-  margin-right: 90vw;
-}
+
 .content{
   text-align: center
 }
+.site-statistic-demo-card {
+  padding: 30px;
+  background: #ececec;
+}
+  [data-theme="dark"] .site-statistic-demo-card {
+    background: #303030;
+  }
