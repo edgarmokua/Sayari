@@ -96,12 +96,12 @@ var rows  = []
 
 
     return (
-     <>
+     <div className="scroll">
      <Card title="Element Count" bordered={false} style={{ color: '#3f8600',width : 300}}>
           <div style={{fontSize: 30}}> {element_count}</div>
         </Card>
       {[rows]}
-      </> 
+      </div> 
            
 
     )

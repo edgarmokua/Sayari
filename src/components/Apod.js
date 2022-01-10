@@ -1,12 +1,8 @@
-import React,{useState,useEffect} from 'react'
-import { Image, Descriptions,Button, Spin} from 'antd';
+import { Image, Descriptions,Button} from 'antd';
 
 
 function Apod({data}) {
-  const[isLoading,setIsLoading] = useState(true)
-  useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1000)
-  }, [])
+  
     var rows = []
     for (var i = 0;i < data.length; i++){
     var index = i
@@ -30,9 +26,7 @@ function Apod({data}) {
     return (
      
         (data[index] ?
-     (!isLoading ? 
       [rows]
-      : <Spin/>)
         : 
         <div>
      <Image width={"100vw"} height={"auto"}src={data.hdurl} fallback alt="space"/>

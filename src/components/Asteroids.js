@@ -3,6 +3,7 @@ import{message,Form,Input,Button} from 'antd'
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import AsteroidsDisplay from './AsteroidsDisplay';
+import '../App.css'
 
 
 function Asteroids() {
@@ -19,7 +20,6 @@ function Asteroids() {
           console.log(err)
         }
       }
-console.log(data)
 const asteroidItems =  data.map(inner => [inner].map((data) =>
 <AsteroidsDisplay key={uuidv4()} data={data} date={[date]}/>
 
@@ -37,6 +37,8 @@ const submitAction = (e) => {
      }
     return (
         <div>
+          <div className='content'>
+           <div>Get the Asteroid data of specific periods by specifying the start and end date in YYYY-MM-DD Format</div>
              <Form onFinish={submitAction}>
      <Input style={{width: "40vw",marginBottom: 10}} placeholder="Start Date" allowClear value={startDate} onChange={(e) => setStartDate(e.target.value)}/>
      <br/>
@@ -44,7 +46,10 @@ const submitAction = (e) => {
      <br/>
       <Button type="primary" onClick={submitAction} style={{width: "40vw", marginBottom: 10}} >Submit</Button>
       </Form> 
-      {asteroidItems}
+      </div>
+    
+    {asteroidItems}
+  
         </div>
     )
 }
