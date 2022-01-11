@@ -7,6 +7,8 @@ import { Drawer,Button,Dropdown,Menu } from 'antd';
 import Asteroids from './components/Asteroids';
 import { DownOutlined } from '@ant-design/icons';
 import Coronal from './components/Coronal';
+import CoronalAnalyses from './components/CoronalAnalyses';
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
     <Menu>
       <Menu.Item key="1"><a href="/asteroids">Asteroids</a></Menu.Item>
       <Menu.Item key="2"><a href="/coronal">Coronal</a></Menu.Item>
+      <Menu.Item key="3"><a href="/coronalanalyses">Coronal Analyses</a></Menu.Item>
     </Menu>
   );
   return (
@@ -38,18 +41,20 @@ function App() {
       More<DownOutlined />
     </Button>
   </Dropdown>
-  </div>       
+  </div>    
         </div>
         <Drawer title="Menu"  theme="dark" placement="left" onClose={onClose} visible={visible}>
       <Button type="primary"  href="/">APOD</Button><br/><br/>
       <Button type="primary" href="/asteroids">Asteroids</Button><br/><br/>
-      <Button type="primary" href="/coronal">Coronal</Button>
+      <Button type="primary" href="/coronal">Coronal</Button><br/><br/>
+      <Button type="primary" href="/coronalanalyses">Coronal Analyses</Button>
       </Drawer>
       <Router>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/asteroids" element={<Asteroids/>}/>
           <Route path="/coronal" element={<Coronal/>}/>
+          <Route path="/coronalanalyses" element={<CoronalAnalyses/>}/>
           </Routes>
       </Router>
     

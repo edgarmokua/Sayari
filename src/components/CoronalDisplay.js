@@ -1,8 +1,7 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import {Link} from 'react-router-dom';
 import { Statistic, Card, Row, Col,Divider } from 'antd';
-import { Typography, Space } from 'antd';
+import { Typography} from 'antd';
 
 
 

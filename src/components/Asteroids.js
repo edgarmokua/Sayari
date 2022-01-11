@@ -38,7 +38,8 @@ const submitAction = (e) => {
     return (
         <div>
           <div className='content'>
-           <div>Get the Asteroid data of specific periods by specifying the start and end date in YYYY-MM-DD Format</div>
+           <div>Get the Asteroid data of specific periods by specifying the start and end date in <strong>YYYY-MM-DD Format</strong> </div>
+           <div><strong>Maximum Range between start date and end date is 7 days past that no data will be returned</strong></div>
              <Form onFinish={submitAction}>
      <Input style={{width: "40vw",marginBottom: 10}} placeholder="Start Date" allowClear value={startDate} onChange={(e) => setStartDate(e.target.value)}/>
      <br/>
